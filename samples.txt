@@ -1,39 +1,43 @@
-Start Stream (plays last Source or the default Source)
+####Start Stream (plays last Source or the default Source)
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Play
 RESULT: 200 OK
-
-Pause Stream
+-------------------------------------------------------------
+####Pause Stream
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Pause
 RESULT: 200 OK
-
-Stop Stream
+-------------------------------------------------------------
+####Stop Stream
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Stop
 RESULT: 200 OK
-
-Set Device to Standby
+-------------------------------------------------------------
+####Set Device to Standby
 PUT http://$IP-Address:8080/BeoDevice/powerManagement/standby
 Content-Type: application/json
 JSON Data: {"standby": {"powerState":"allStandby"}}
 RESULT: 200 OK
 
-Modify Sound Paramaters (e.g. Bass)
+Curl example:
+```curl -H "Content-Type: application/json" --request PUT --data '{"standby": {"powerState":"allStandby"}}' http://192.168.77.130:8080/BeoDevice/powerManagement/standby```
+-------------------------------------------------------------
+####Modify Sound Paramaters (e.g. Bass)
 PUT http://$IP-Address:8080/BeoZone/Zone/Sound/Adjustment/
 Content-Type: application/json
 JSON Data: {"adjustment": {"bass": 2,"ecoMode": false,"loudness": false,"treble": 4}}
 Set Values as needed.
 RESULT: 501 Not Implemented   (But works fine. Beo App does exactly this same PUT)
-
-Volume control
+-------------------------------------------------------------
+####Volume control
 PUT http://$IP-Address:8080/BeoZone/Zone/Volume/Speaker/Level
 Content-Type: application/json
 JSON Data: {"level": 30}
 Set Volume as needed ^^
 RESULT: 200 OK
-
-next Track or Station
+-------------------------------------------------------------
+####next Track or Station
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Forward
 RESULT: 200 OK
-
-previous Track or Station
+-------------------------------------------------------------
+####previous Track or Station
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Backward
 RESULT: 200 OK
+-------------------------------------------------------------
