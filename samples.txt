@@ -30,4 +30,10 @@ JSON Data: {"level": 30}
 Set Volume as needed ^^
 RESULT: 200 OK
 
+next Track or Station
+POST http://$IP-Address:8080/BeoZone/Zone/Stream/Forward
+RESULT: 200 OK
 
+previous Track or Station
+POST http://$IP-Address:8080/BeoZone/Zone/Stream/Backward
+RESULT: 200 OK
