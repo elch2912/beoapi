@@ -1,8 +1,8 @@
-####Start Stream (plays last Source or the default Source)
+**Start Stream (plays last Source or the default Source)**
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Play
 RESULT: 200 OK
 -------------------------------------------------------------
-####Pause Stream
+**Pause Stream**
 POST http://$IP-Address:8080/BeoZone/Zone/Stream/Pause
 RESULT: 200 OK
 -------------------------------------------------------------
